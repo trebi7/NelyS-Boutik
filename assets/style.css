@@ -1,0 +1,174 @@
+:root {
+  --pink: #d98ba0;
+  --pink-dark: #b45c74;
+  --cream: #fdf6f3;
+  --text: #33282a;
+  --muted: #7a6a6d;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.5;
+}
+
+a { color: var(--pink-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  letter-spacing: 0.5px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: var(--text);
+  font-size: 0.95rem;
+}
+nav a.active, nav a:hover { color: var(--pink-dark); font-weight: 600; }
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+.hero { text-align: center; }
+.hero h1 { font-size: 2.2rem; margin-bottom: 4px; color: var(--pink-dark); }
+.hero .tagline { font-style: italic; color: var(--muted); margin-top: 0; }
+.hero-banner { max-width: 320px; width: 100%; border-radius: 8px; margin: 20px 0; }
+.hero h2 { margin-top: 30px; letter-spacing: 1px; }
+.hero .promo { font-weight: 700; color: var(--pink-dark); }
+.hero .shipping { font-weight: 600; }
+.cta {
+  display: inline-block;
+  margin: 16px 0;
+  padding: 12px 28px;
+  background: var(--pink-dark);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.cta:hover { background: var(--pink); text-decoration: none; }
+
+.featured { margin-top: 50px; }
+.featured h2 { text-align: center; color: var(--pink-dark); }
+.feature-grid, .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+.feature-card, .product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  text-align: center;
+  position: relative;
+}
+.feature-card img, .product-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.img-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #f0e4e6;
+  border-radius: 8px;
+}
+.feature-card h3, .product-card h3 { font-size: 1rem; margin: 10px 0 4px; }
+.feature-card p { font-size: 0.9rem; color: var(--muted); }
+.price { font-weight: 700; color: var(--pink-dark); margin: 4px 0 0; }
+.price-original { text-decoration: line-through; color: var(--muted); font-weight: 400; margin-right: 6px; }
+.price-promo { color: #c0392b; }
+.price.out-of-stock { color: var(--muted); font-weight: 400; font-style: italic; }
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--pink-dark);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
+
+.category h1, .legal h1 { color: var(--pink-dark); }
+.category .intro { color: var(--muted); margin-bottom: 24px; }
+.category .note { margin-top: 24px; font-size: 0.9rem; color: var(--muted); font-style: italic; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.legal p { max-width: 760px; }
+
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+  margin-top: 60px;
+  padding: 30px 20px 20px;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+.archive-note {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
